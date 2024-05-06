@@ -1,0 +1,46 @@
+nav{
+    max-width: 700px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 20px;
+    margin-right: 25px;   
+    padding: 10px 50px 0 0; 
+}
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.menu-horizontal > li>a{
+    display: block;
+    padding: 15px 20px;
+    color: rgb(27, 24, 24);
+    text-decoration: none;  
+}
+
+.menu-horizontal> li:hover{
+    transition: background-color 0.3s;
+    border-radius: 50%;
+    background-color: #f3edf7d7;
+}
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 180px;
+    background-color: rgba(0, 0, 0, 0.356);
+    z-index: 999;
+}
+.menu-horizontal li:hover .menu-vertical{
+    display: block;
+}
+.menu-vertical li:hover{
+    background-color: rgba(0, 0, 0, 0.322);
+}
+.menu-vertical li a{
+    display: block;
+    color: rgb(248, 244, 244);
+    padding: 15px 15px 20px;
+    text-decoration: none;
+}

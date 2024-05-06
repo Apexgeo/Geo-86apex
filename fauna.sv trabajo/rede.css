@@ -1,0 +1,24 @@
+.soial-links{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    right: 20px;
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+}
+.soial-links a{
+    color: #fff;
+    font-size: 22px;
+    transition: 0.4s;
+}
+.soial-links a:hover{
+    transform: scale(1.4);
+}
+.soial-links span{
+    color: #fff;
+    font-weight: 500;
+    transform: rotate(90deg);
+    margin-bottom: 40px;
+}

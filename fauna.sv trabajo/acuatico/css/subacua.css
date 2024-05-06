@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #1d273b;
+    font-weight: 300;
+}
+/*contenedores para tener sentrada la imagen*/
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+.contenedor1 {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 60px 0;
+}
+h1 {
+    font-size: 50px;
+}
+/*header*/
+header::before {
+    content: "";
+    display: block;
+    margin-bottom: 80px;
+}
+/*menu*/
+nav {
+    width: 100%;
+    height: 80px;
+    background: #b0baf1;
+    border-bottom: 1px solid transparent;
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .2);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    transition: ease-in-out 0.5s;
+}
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.menu-horizontal > li>a{
+    display: block;
+    padding: 15px 20px;
+    color: rgb(24, 22, 22);
+    text-decoration: none;  
+}
+.menu-horizontal> li:hover{
+    transition: background-color 0.3s;
+    border-radius: 50%;
+    background-color: #f3edf7d7;
+}
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 180px;
+    background-color: rgba(0, 0, 0, 0.356);
+    z-index: 999;
+}
+.menu-horizontal li:hover .menu-vertical{
+    display: block;
+}
+.menu-vertical li:hover{
+    background-color: rgba(0, 0, 0, 0.322);
+}
+.menu-vertical li a{
+    display: block;
+    color: rgb(248, 244, 244);
+    padding: 15px 15px 20px;
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    padding: 0 40px;
+}
+.nav .logo {
+    height: 80px;
+}
+.nav .logo img {
+    height: 100%;
+    vertical-align: top;
+}
+.enlaces-header {
+    font-weight: 300;
+    transition: ease-in-out 0.5s;
+}
+.nav .enlaces-header a {
+    color: #5D6678;
+    text-decoration: none;
+    margin-left: 20px;
+}
+.contenido-header {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.textos-header {
+    margin: 0 0 0 30px;
+}
+.contenido-header p {
+    font-weight: 100;
+    margin-top: 14px;
+    color: #5D6678;
+}
+.titulo {
+    font-size: 50px;
+    color: white;
+}
+/*comida*/
+.about-us {
+    background: linear-gradient(245.59deg,#5050f0 0%, #664cc5bd 28.53%, #022047 75.52%);
+}
+.contenedor-articulo {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    justify-content: space-around;
+}
+.articulo {
+    width: 29%;
+    background: linear-gradient(245.59deg,#c4ce6c 0%, #e28be2 28.53%, #6ae68fb9 75.52%);
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 45px 30px 60px 30px;
+    transition: 0.5s;
+}
+.articulo:hover {
+    box-shadow: 0 4px 10px rgba(17, 29, 48, .26);
+}
+/*para los sirculos dela comida*/
+.articulo img{
+    box-shadow: 0 10px 45px rgb(44, 31, 222);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation-name: flotar;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes flotar {   
+    0% {
+    transform: translateY(0);
+    }
+    50% {
+    transform: translateY(20px);
+    }
+    100% {
+    transform: translateY(0);
+    }
+}
+.articulo>h3 {
+    font-size: 24px;
+    margin-top: 30px;
+}
+.articulo>p {
+    font-weight: 100;
+    color: #5D6678;
+    margin-top: 15px;
+    padding-bottom: 20px;
+}
+/*para la ultima informacion*/
+.questions {
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.questions>img {
+    width: 550px;
+}
+.textos-questions {
+    margin: 0 0 0 30px;
+}
+.textos-questions p {
+    font-weight: 100;
+    margin-top: 14px;
+    color: #5D6678;
+}
+.textos-questions a {
+    margin: 28px 0 0 0;
+    width: 130px;
+    display: inline-block;
+    background: #de1fd5;
+    text-align: center;
+    color: #fff;
+    padding: 12px 0;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 0 8px 32px rgba(206, 31, 222, 0.46);
+}
+.burbuja{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #f1f2f3;
+    opacity: .3;
+    position: absolute;
+    bottom: -150;
+    animation: burbujas 3s linear infinite ;
+    left: 5%;
+}
+.burbuja:nth-child(1){
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 5s;
+    animation-delay: 0s;
+}
+.burbuja:nth-child(2){
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 0s;
+}
+.burbuja:nth-child(3){
+    width: 20px;
+    height: 20px;
+    left: 10%;
+    animation-duration: 1.6s;
+    animation-delay: 0s;
+}
+
+.burbuja:nth-child(4){
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    animation-duration: 4.1s;
+    animation-delay: 0s;
+}
+
+.burbuja:nth-child(5){
+    width: 70px;
+    height: 70px;
+    left: 65%;
+    animation-duration:8s;
+    animation-delay: 0.1s;
+}
+.burbuja:nth-child(6){
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 1.9s;
+    animation-delay: 0s;
+}
+.burbuja:nth-child(7){
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 9s;
+    animation-delay: 0s;
+}
+.burbuja:nth-child(8){
+    width: 60px;
+    height: 60px;
+    left: 45%;
+    animation-duration: 9s;
+    animation-delay: 0s;
+}
+.burbuja:nth-child(9){
+    width: 10px;
+    height: 10px;
+    left: 10%;
+    animation-duration: 7s;
+    animation-delay: 0s;
+}
+.burbuja:nth-child(10){
+    width: 30px;
+    height: 30px;
+    left: 90%;
+    animation-duration: 5s;
+    animation-delay: 0s;
+}
+
+@keyframes burbujas{
+0%{
+    bottom: 0;
+    opacity: 0;
+}
+30%{
+    transform:translateX(30px)
+}
+50%{
+  opacity: .4;
+}
+100%{
+ bottom: 100vh;
+ opacity: 0;
+}
+}
+@keyframes movimiento{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform:translateY(30px);
+}
+100%{
+    transform: translateY(0);
+}
+}

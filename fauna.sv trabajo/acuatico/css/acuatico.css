@@ -1,0 +1,217 @@
+@import url(/menu.css);
+@import url(/rede.css);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+/*cuerpo*/
+header{
+    position: fixed;
+    right: 0;
+    z-index: 100%;
+    display: flex;
+    z-index: 999;
+}
+.hero{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(245.59deg,#2484c4 0%, #c24fc2 28.53%, #40da6eb9 75.52%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+/*mover la letra*/
+section{
+    padding: 0 9%;
+}
+.hero-text h5{
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 60px;
+}
+.hero-text h1{
+    font-family: 'permanent marker', cursive;
+    font-size: 90px;
+    line-height: 1;
+    color: white;
+    margin: 0 0 45px;
+}
+.hero-text h4{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 10px;
+}
+.hero-text p{
+    color: white;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 40px;
+}
+.hero-img img{
+    width: 500px;
+    height: auto;
+    position: relative;
+    animation-name: flotar;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes flotar {
+    0% {
+    transform: translateY(0);
+    }
+    50% {
+    transform: translateY(20px);
+    }
+    100% {
+    transform: translateY(0);
+    }
+}
+.hero-text a{
+    display: inline-block;
+    color: rgb(248, 243, 243);
+    background: #10c20a;
+    border: 1px solid transparent;
+    padding: 12px 30px;
+    line-height: 14px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .55s ease;
+}
+.hero-text a:hover{
+    background: transparent;
+    border: 1px solid white;
+    transform: translateX(8px);
+}
+.hero-text a.ctaa{
+    background: transparent;
+    border: 1px solid white;
+    margin-left: 20px;
+}
+.hero-text a.ctaa i{
+    vertical-align: middle;
+    margin-right: 5px;
+}
+/*animacion para las burbujas*/
+.burbuja{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #f1f2f3;
+    opacity: .3;
+    position: absolute;
+    bottom: -150;
+    animation: burbujas 3s linear infinite ;
+    left: 5%;
+}
+.burbuja:nth-child(1){
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 5s;
+    animation-delay: 0s;
+}
+.burbuja:nth-child(2){
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 0s;
+}
+.burbuja:nth-child(3){
+    width: 20px;
+    height: 20px;
+    left: 10%;
+    animation-duration: 1.6s;
+    animation-delay: 0s;
+}
+
+.burbuja:nth-child(4){
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    animation-duration: 4.1s;
+    animation-delay: 0s;
+}
+
+.burbuja:nth-child(5){
+    width: 70px;
+    height: 70px;
+    left: 65%;
+    animation-duration:8s;
+    animation-delay: 0.1s;
+}
+.burbuja:nth-child(6){
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 1.9s;
+    animation-delay: 0s;
+}
+.burbuja:nth-child(7){
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 9s;
+    animation-delay: 0s;
+}
+.burbuja:nth-child(8){
+    width: 60px;
+    height: 60px;
+    left: 45%;
+    animation-duration: 9s;
+    animation-delay: 0s;
+}
+.burbuja:nth-child(9){
+    width: 10px;
+    height: 10px;
+    left: 10%;
+    animation-duration: 7s;
+    animation-delay: 0s;
+}
+.burbuja:nth-child(10){
+    width: 30px;
+    height: 30px;
+    left: 90%;
+    animation-duration: 5s;
+    animation-delay: 0s;
+}
+
+@keyframes burbujas{
+0%{
+    bottom: 0;
+    opacity: 0;
+}
+30%{
+    transform:translateX(30px)
+}
+50%{
+  opacity: .4;
+}
+100%{
+ bottom: 100vh;
+ opacity: 0;
+}
+}
+@keyframes movimiento{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform:translateY(30px);
+}
+100%{
+    transform: translateY(0);
+}
+}
