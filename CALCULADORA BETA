@@ -1,0 +1,101 @@
+#include <stdio.h>
+main(){
+    //de claramos las bariables que usaremos todas se podian agregar en el in pero no quiero ai si quieren las agregas todas ai
+    int a,b,num;
+    float cont;
+
+    do{
+        //es el menu
+    printf("\nEsta es una calculadora con un for primera fase beta\n");
+    printf("\nMENU\n");
+    printf("\n1.SUMA\n");
+    printf("\n2.RESTA\n");
+    printf("\n3.MULTIPLICAION\n");
+    printf("\n4.DIVISION\n");
+    printf("\n5.SALIR\n");
+    //asta a qui termina
+    //opcion es la que elijas del menu
+    printf("\nElija una opcion\n");
+    scanf("%d",&num);//num hace colo carte en la opcion que deceas hacer en los case en las cajas para que entendas 
+    system("cls");//limpia la terminal cada ves que seleccionas una opcion
+
+    if(num==5) break; //el break es para cererar el if por q solo funciona para salir con el numero 5
+
+        switch (num)
+        {
+        case 1://inicia el promer case 
+        printf("\nELEGISTES LA OPCION SUMA\n");
+        printf("\nINGRESA CUANTAS PAREJAS DE SEAS SUMAR POR FAVOR:");
+                scanf("%f",&cont);//a qui se guarda las cuantas beces de seas hacer el progrma
+            for (int i = 0; i < cont; i++)//i esta desde 0 por q el usuario agrega cuantas operaciones de sea hacer en la variabale cont
+            {
+                printf("\nINGRESA EL PRIMER NUMERO:");
+                scanf("%d",&a);
+                printf("\nINGRESA EL SEGUNDO NUMERO:");
+                scanf("%d",&b);
+                printf("\nEL RESULTADO ES:%d",a+b);
+                printf("\n");//borrar un espacio para que imprima el enter para continuar
+            }
+            break;//y a qui finaliza
+
+            case 2:
+            printf("\nELEGISTES LA OPCION RESTA\n");
+            printf("\nINGRESA CUANTAS PAREJAS DE SEAS RESTAR POR FAVOR:");
+            scanf("%f",&cont);
+            for(int i=0; i<cont; i++)
+            {
+                printf("\nINGRESA EL PRIMER NUMERO:");
+                scanf("%d",&a);
+                printf("\nINGRESA EL SEGUNDO NUMERO:");
+                scanf("%d",&b);
+                printf("\nEL RESULTADO ES:%d",a-b);
+                printf("\n");//borrar un espacio para que imprima el enter para continuar
+            }
+            break;
+
+            case 3:
+            printf("\nELEGISTES LA OPCION MULTIPLICACION\n");
+            printf("\nINGRESA CUANTAS PAREJAS DE SEAS MULTIPLICAR POR FAVOR:");
+            scanf("%f",&cont);
+            for(int i=0; i<cont; i++)
+            {
+                printf("\nINGRESA EL PRIMER NUMERO:");
+                scanf("%d",&a);
+                printf("\nINGRESA EL SEGUNDO NUMERO:");
+                scanf("%d",&b);
+                printf("\nEL RESULTADO ES:%d",a*b);
+                printf("\n");//borrar un espacio para que imprima el enter para continuar
+            }
+            break;
+
+            case 4:
+            printf("\nELEGISTES LA OPCION DIVISION\n");
+            printf("\nINGRESA CUANTAS PAREJAS DE SEAS DIVIDIR POR FAVOR:");
+            scanf("%f",&cont);
+            for(int i=0; i<cont; i++)
+            {
+                printf("\nINGRESA EL PRIMER NUMERO:");
+                scanf("%d",&a);
+                printf("\nINGRESA EL SEGUNDO NUMERO:");
+                scanf("%d",&b);
+                if(b!=0 && a!=0)//verifiica que sean divisibles los numeros si estas intentando dividir 0 no podras por gay
+                {
+                printf("\nEL RESULTADO ES:%d",a/b);//si no divides por 0 te dara el resultado
+                }else
+                {
+                printf("\nError: Division por cero no permitida.\n");//si divides por 0 eres pendejo
+                }
+                printf("\n");//borrar un espacio para que imprima el enter para continuar
+            }
+            break;
+        }
+        printf("PRECIONA ENTER PARA CONTINUAR...");
+        getchar();//funciona solo para que el usuario espere
+        system("pause>null");//pausa la opcion que seleccionas
+        system("cls");//limpia la terminal
+    }while(1);/*es una instrucción que dice 
+    "mientras que 1 es verdadero, sigue ejecutando el código dentro del bucle". Como 1 siempre es verdadero*/
+    return 0;
+}
+//el mas xd el progrma, espero me logre explicar cual quier dudan me preguntan majes gay
+//si quieres optimiza mas el codigo mas que yo
